@@ -1,0 +1,22 @@
+.jobContainer {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+
+.logoDiv {
+
+}
+
+.leftDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+}
+
+.titleAndDescription {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

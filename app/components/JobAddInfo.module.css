@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 20px;
+}
+
+.infoItem {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
