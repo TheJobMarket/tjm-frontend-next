@@ -1,15 +1,9 @@
 .jobContainer {
-    border-style: solid;
-    border-radius: 10px;
-    border-color: rgba(255, 255, 255, 0.5);
-    border-width: 2px;
-    /*padding-top: 20px;*/
-    /*padding-bottom: 20px;*/
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(40px);
-    cursor: pointer;
-    transition: 0.1s;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 .leftDiv {
@@ -17,18 +11,6 @@
     flex-direction: row;
     align-items: center;
     gap: 20px;
-}
-
-.jobContainer:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-    scale: 100.3%;
-    transition: 0.1s;
-    box-shadow: var(--box-shadow);
-}
-
-.jobTitle, .companyName {
-    text-shadow: var(--text-shadow);
-    color: #ffffff;
 }
 
 .jobTitle {
@@ -50,7 +32,7 @@
     /*margin-left: 20px;*/
     /*margin-right: 20px;*/
     align-content: center;
-    box-shadow: var(--box-shadow);
+    /*box-shadow: var(--box-shadow);*/
 }
 
 .logoDiv img {
@@ -60,11 +42,12 @@
     border-radius: 50%;
 }
 
-.noDecoration {
-    text-decoration: none;
-}
+/*.noDecoration {*/
+/*    text-decoration: none;*/
+/*    color: #ffffff;*/
+/*}*/
 
-.titleAndDescription {
+.titleAndCompany {
     display: flex;
     flex-direction: column;
     gap: 5px;

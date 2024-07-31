@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.jobTitle {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.logoDiv {
+    height: 40px;
+    width: 40px;
+    background-color: #ffffff;
+    border-radius: 100%;
+    padding: 5px;
+    align-content: center;
+}
+
+.logoDiv img {
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
+    border-radius: 50%;
+}

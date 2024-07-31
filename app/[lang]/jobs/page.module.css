@@ -2,7 +2,7 @@
     font-size: 72px;
     font-weight: bold;
     color: #ffffff;
-    text-shadow: var(--text-shadow);
+    /*text-shadow: var(--text-shadow);*/
     text-align: center;
     margin-top: 120px;
     margin-bottom: 120px;

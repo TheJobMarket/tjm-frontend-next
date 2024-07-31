@@ -3,10 +3,10 @@ import styles from './JobAddInfo.module.css';
 function getInfo(job: any) {
     let info = [];
 
-    if (job.salary != null) {
+    if (job.pay != null) {
         info.push({
             property: "salary",
-            value: job.salary
+            value: job.pay
         });
     }
 
@@ -17,17 +17,17 @@ function getInfo(job: any) {
         });
     }
 
-    if (job.location != null) {
+    if (job.jobLocation != null) {
         info.push({
             property: "location",
-            value: job.location
+            value: job.jobLocation
         });
     }
 
-    if (job.date != null) {
+    if (job.datePosted != null) {
         info.push({
             property: "date",
-            value: job.date
+            value: job.datePosted
         });
     }
 
@@ -36,12 +36,13 @@ function getInfo(job: any) {
 
 export default function JobAddInfo({ job }: any) {
     const info = getInfo(job);
+    console.log(info);
 
     const icons: any = {
-        "date": "",
-        "location": "",
-        "languages": "",
-        "salary": "",
+        "date": "📅",
+        "location": "📍",
+        "languages": "🌐",
+        "salary": "💶",
     };
 
     return (

@@ -1,0 +1,57 @@
+import styles from './page.module.css';
+import '../../../../globals.css';
+import JobPostMinimal from "@/app/components/JobPostMinimal";
+import {resolveCid} from "@/app/lib/utils";
+import JobAddInfo from "@/app/components/JobAddInfo";
+
+export default async function Page({ params }: any) {
+
+    const job: any = await fetch(
+        `http://localhost:8080/jobs/${params.job_id}`,
+        { mode: "cors", method: "GET" }
+    ).then(res => res.json());
+
+    // TODO change to:
+    // const similarJobs = await fetch(`http://localhost:8080/jobs?${job.title}+${job.company}`, { mode: "cors", method: "GET" })
+    const similarJobs = await fetch(`http://localhost:8080/jobs`, { mode: "cors", method: "GET" })
+        .then(res => res.json());
+
+    return (
+        <div className={styles.positionPage}>
+            <h1 className={styles.title}>About the position</h1>
+            <div className={styles.positionContainer}>
+                <div className={[styles.positionHeader, "transparentCard"].join(" ")}>
+                    <div className={styles.logoAndPositionDescription}>
+                        <div className={styles.logoDiv}>
+                            <img alt="" src={resolveCid(job.company.logoCid)} />
+                        </div>
+                        <div className={styles.titleAndCompany}>
+                            <div className={styles.jobTitle}>{job.title}</div>
+                            <div className={styles.companyName}>{job.company.name}</div>
+                        </div>
+                    </div>
+                    <JobAddInfo job={job} />
+                </div>
+                <div className={styles.roleOuterContainer}>
+                    <h2 className={styles.subtitle}>The role 📝</h2>
+                    <div className={[styles.roleInfoCard, "transparentCard"].join(" ")}>
+                        <div className={styles.contextText}>{job.description}</div>
+                    </div>
+                </div>
+                <div className={styles.companyOuterContainer}>
+                    <h2 className={styles.subtitle}>The company 🏢</h2>
+                    <div className={[styles.companyInfoCard, "transparentCard"].join(" ")}>
+                        <div className={styles.contentText}>{job.company.description}</div>
+                    </div>
+                </div>
+                <div className={styles.simOpsOuterContainer}>
+                    <h2 className={styles.subtitle}>Similar opportunities 🧲</h2>
+                    <div className={styles.listOfOpportunities}>
+                        {similarJobs.map((job: any, i: number) => <JobPostMinimal key={i} job={job} />)}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    )
+}

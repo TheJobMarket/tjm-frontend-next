@@ -26,7 +26,7 @@
 
 .positionContainer {
     display: grid;
-    grid-template-rows: 100px auto 1fr;
+    grid-template-rows: auto auto 1fr;
     grid-template-columns: repeat(5, 1fr);
     margin-left: 300px;
     margin-right: 300px;
@@ -39,6 +39,16 @@
     grid-column-end: 6;
     grid-row-start: 1;
     grid-row-end: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}
+
+.logoAndPositionDescription {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
 
 .roleOuterContainer {
@@ -61,6 +71,45 @@
     gap: 20px;
 }
 
+.roleInfoCard, .companyInfoCard {
+    padding: 20px;
+}
+
+.titleAndCompany {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.jobTitle {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.companyName {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.logoDiv {
+    height: 60px;
+    width: 60px;
+    background-color: #ffffff;
+    border-radius: 100%;
+    padding: 5px;
+    /*margin-left: 20px;*/
+    /*margin-right: 20px;*/
+    align-content: center;
+    /*box-shadow: var(--box-shadow);*/
+}
+
+.logoDiv img {
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
+    border-radius: 50%;
+}
+
 .simOpsOuterContainer {
     grid-column-start: 4;
     grid-column-end: 6;
@@ -71,30 +120,11 @@
     gap: 20px;
 }
 
-.transparentCard {
-    border-style: solid;
-    border-radius: 10px;
-    border-color: rgba(255, 255, 255, 0.5);
-    border-width: 2px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(40px);
-    height: 100%;
-    transition: 0.1s;
-}
-
-.transparentCard:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-    box-shadow: var(--box-shadow);
-    scale: 100.5%;
-    transition: 0.1s;
-}
-
-.contentText {
-    font-family: "Helvetica Neue", sans-serif;
-    color: #ffffff;
-    text-align: left;
-}
+/*.contentText {*/
+/*    font-family: "Helvetica Neue", sans-serif;*/
+/*    color: #ffffff;*/
+/*    text-align: left;*/
+/*}*/
 
 .listOfOpportunities {
     display: flex;

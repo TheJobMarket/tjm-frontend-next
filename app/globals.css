@@ -17,3 +17,32 @@ html, body {
   /*background: conic-gradient(from 230deg at center, #002E3D, #003D69, #0090A3) no-repeat fixed;*/
   background: linear-gradient(80deg, #002E3D 0%, #003D69 40%, #0090A3 100%) no-repeat fixed;
 }
+
+.transparentCard {
+  border-style: solid;
+  border-radius: 10px;
+  border-color: rgba(255, 255, 255, 0.5);
+  border-width: 2px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(40px);
+  height: 100%;
+  transition: 0.1s;
+
+}
+
+.transparentCard:hover {
+
+}
+
+.clickable:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: var(--box-shadow);
+  scale: 100.3%;
+  transition: 0.1s;
+}
+
+.noDecoration {
+  text-decoration: none;
+  color: #ffffff;
+}
