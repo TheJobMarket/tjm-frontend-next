@@ -1,5 +1,6 @@
 :root {
   --text-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  --box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 * {
@@ -11,8 +12,8 @@
 html, body {
   max-width: 100vw;
   overflow-x: hidden;
-}
-
-body {
   font-family: "Helvetica Neue", sans-serif;
+  color: #ffffff;
+  /*background: conic-gradient(from 230deg at center, #002E3D, #003D69, #0090A3) no-repeat fixed;*/
+  background: linear-gradient(80deg, #002E3D 0%, #003D69 40%, #0090A3 100%) no-repeat fixed;
 }

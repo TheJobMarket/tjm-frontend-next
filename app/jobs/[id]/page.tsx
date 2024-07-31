@@ -1,4 +1,5 @@
 import styles from './page.module.css';
+import '../../globals.css';
 
 export default async function Page({ params }: any) {
 
@@ -13,19 +14,19 @@ export default async function Page({ params }: any) {
 
                 </div>
                 <div className={styles.roleOuterContainer}>
-                    <h2 className={styles.subtitle}>The role</h2>
+                    <h2 className={styles.subtitle}>The role 📝</h2>
                     <div className={styles.transparentCard}>
                         <div className={styles.contextText}>{job.description}</div>
                     </div>
                 </div>
                 <div className={styles.companyOuterContainer}>
-                    <h2 className={styles.subtitle}>The company</h2>
+                    <h2 className={styles.subtitle}>The company 🏢</h2>
                     <div className={styles.transparentCard}>
                         <div className={styles.contentText}>{job.company.description}</div>
                     </div>
                 </div>
                 <div className={styles.simOpsOuterContainer}>
-                    <h2 className={styles.subtitle}>Similar opportunities</h2>
+                    <h2 className={styles.subtitle}>Similar opportunities 🧲</h2>
                     <div className={styles.listOfOpportunities}>
                         <div className={styles.transparentCard}>
                             <div className={styles.contextText}>AAAAA</div>

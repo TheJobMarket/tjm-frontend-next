@@ -4,16 +4,14 @@
     color: #ffffff;
     text-shadow: var(--text-shadow);
     text-align: center;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    margin-top: 120px;
+    margin-bottom: 120px;
 }
 
-.banner {
-    height: 30px;
-    /*background-color: #0D2590;*/
-}
-
-.exploreDiv {
+.jobsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     /*max-width: 1000px;*/
     /* TODO change to max-width*/
     margin-left: 200px;
@@ -21,11 +19,13 @@
 }
 
 .jobListPage {
-    background: conic-gradient(from 230deg at center, #002E3D, #003D69, #0090A3) no-repeat fixed;
+    /*background: conic-gradient(from 230deg at center, #002E3D, #003D69, #0090A3) no-repeat fixed;*/
     background-size: 100%;
 }
 
 .containerFlex {
+    margin-top: 80px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 25px;

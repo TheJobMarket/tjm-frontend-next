@@ -1,5 +1,5 @@
 .title, .subtitle {
-    text-shadow: var(--text-shadow);
+    /*text-shadow: var(--text-shadow);*/
     color: #ffffff;
 }
 
@@ -7,7 +7,8 @@
     font-size: 48px;
     font-weight: bold;
     text-align: center;
-    margin-top: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .subtitle {
@@ -17,13 +18,10 @@
     margin-top: 10px;
 }
 
-.textShadow {
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
-
 .positionPage {
-    background: conic-gradient(from 230deg at center, #002E3D, #003D69, #0090A3) no-repeat fixed;
+    /*background: conic-gradient(from 230deg at center, #002E3D, #003D69, #0090A3) no-repeat fixed;*/
     background-size: 100%;
+    padding-top: 50px;
 }
 
 .positionContainer {
@@ -81,23 +79,24 @@
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(40px);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     height: 100%;
+    transition: 0.1s;
 }
 
 .transparentCard:hover {
     background-color: rgba(255, 255, 255, 0.15);
-    scale: 100.3%;
+    box-shadow: var(--box-shadow);
+    scale: 100.5%;
     transition: 0.1s;
 }
 
-.content-text {
+.contentText {
     font-family: "Helvetica Neue", sans-serif;
     color: #ffffff;
     text-align: left;
 }
 
-.list-of-opportunities {
+.listOfOpportunities {
     display: flex;
     flex-direction: column;
     gap: 10px;
