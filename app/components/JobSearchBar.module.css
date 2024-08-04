@@ -35,8 +35,12 @@
     transition: 0.1s;
 }
 
+.searchBar::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
 .searchBar:hover {
-    color: #28282c;
+    /*color: #ffffff;*/
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(40px);
     /*border-color: rgba(255, 255, 255, 0.5);*/

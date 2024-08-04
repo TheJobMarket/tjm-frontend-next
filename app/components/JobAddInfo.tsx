@@ -17,10 +17,10 @@ function getInfo(job: any) {
         });
     }
 
-    if (job.jobLocation != null) {
+    if (job.location != null) {
         info.push({
             property: "location",
-            value: job.jobLocation
+            value: job.location
         });
     }
 
@@ -36,7 +36,6 @@ function getInfo(job: any) {
 
 export default function JobAddInfo({ job }: any) {
     const info = getInfo(job);
-    console.log(info);
 
     const icons: any = {
         "date": "📅",

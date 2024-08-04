@@ -16,9 +16,11 @@ export default async function Page({ params }: any) {
     const similarJobs = await fetch(`http://localhost:8080/jobs`, { mode: "cors", method: "GET" })
         .then(res => res.json());
 
+    const dictionary = await import(`@/app/dictionaries/${params.lang}.json`).then((module) => module.default);
+
     return (
         <div className={styles.positionPage}>
-            <h1 className={styles.title}>About the position</h1>
+            <h1 className={styles.title}>{dictionary.text.positionPageTitle}</h1>
             <div className={styles.positionContainer}>
                 <div className={[styles.positionHeader, "transparentCard"].join(" ")}>
                     <div className={styles.logoAndPositionDescription}>
@@ -33,21 +35,21 @@ export default async function Page({ params }: any) {
                     <JobAddInfo job={job} />
                 </div>
                 <div className={styles.roleOuterContainer}>
-                    <h2 className={styles.subtitle}>The role 📝</h2>
+                    <h2 className={styles.subtitle}>{dictionary.text.roleSectionTitle}</h2>
                     <div className={[styles.roleInfoCard, "transparentCard"].join(" ")}>
                         <div className={styles.contextText}>{job.description}</div>
                     </div>
                 </div>
                 <div className={styles.companyOuterContainer}>
-                    <h2 className={styles.subtitle}>The company 🏢</h2>
+                    <h2 className={styles.subtitle}>{dictionary.text.companySectionTitle}</h2>
                     <div className={[styles.companyInfoCard, "transparentCard"].join(" ")}>
                         <div className={styles.contentText}>{job.company.description}</div>
                     </div>
                 </div>
                 <div className={styles.simOpsOuterContainer}>
-                    <h2 className={styles.subtitle}>Similar opportunities 🧲</h2>
+                    <h2 className={styles.subtitle}>{dictionary.text.similarSectionTitle}</h2>
                     <div className={styles.listOfOpportunities}>
-                        {similarJobs.map((job: any, i: number) => <JobPostMinimal key={i} job={job} />)}
+                        {similarJobs.map((job: any, i: number) => <JobPostMinimal key={i} job={job} lang={params.lang} />)}
                     </div>
                 </div>
             </div>

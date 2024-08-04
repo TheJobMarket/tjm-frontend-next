@@ -1,13 +1,12 @@
 import {resolveCid} from "@/app/lib/utils";
 import styles from './JobPostContainer.module.css';
 import JobAddInfo from "@/app/components/JobAddInfo";
-import Image from "next/image";
 import Link from "next/link";
 import '../globals.css';
 
-export default function JobPostContainer({ job, params }: any) {
+export default function JobPostContainer({ job, lang }: any) {
     return (
-        <Link href={`./jobs/${job.company.id}/${job.id}`} className={"noDecoration"}>
+        <Link href={`http://localhost:3000/${lang}/jobs/${job.company.id}/${job.id}`} className={"noDecoration"}>
             <div className={[styles.jobContainer, "transparentCard", "clickable"].join(" ")}>
                 <div className={styles.leftDiv}>
                     <div className={styles.logoDiv}>

@@ -1,0 +1,11 @@
+{
+  "text": {
+    "mainPageTitle": "Explore jobs \uD83D\uDCBC",
+    "searchPlaceholder": "Search by job title or description",
+    "positionPageTitle": "About the position",
+    "roleSectionTitle": "The role \uD83D\uDCDD",
+    "companySectionTitle": "The company \uD83C\uDFE2",
+    "similarSectionTitle": "Similar opportunities \uD83E\uDDF2",
+    "noJobs": "It seems like there are no positions available at the moment. How about you come back later?"
+  }
+}
