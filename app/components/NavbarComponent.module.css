@@ -1,0 +1,22 @@
+.navbarComponent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 200px;
+    padding-right: 200px;
+    height: 100px;
+    font-weight: bold;
+}
+
+.pageList {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.logoDiv {
+    /*margin-right: 30px;*/
+    padding: 20px;
+}
