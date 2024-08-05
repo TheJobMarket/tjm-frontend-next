@@ -1,3 +1,8 @@
+.jobListPage {
+    /*background: conic-gradient(from 230deg at center, #002E3D, #003D69, #0090A3) no-repeat fixed;*/
+    background-size: 100%;
+}
+
 .title {
     font-size: 72px;
     font-weight: bold;
@@ -16,11 +21,6 @@
     /* TODO change to max-width*/
     /*margin-left: 200px;*/
     /*margin-right: 200px;*/
-}
-
-.jobListPage {
-    /*background: conic-gradient(from 230deg at center, #002E3D, #003D69, #0090A3) no-repeat fixed;*/
-    background-size: 100%;
 }
 
 .containerFlex {

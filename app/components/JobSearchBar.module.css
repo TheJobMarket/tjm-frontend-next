@@ -5,20 +5,6 @@
     gap: 15px;
 }
 
-
-/*.searchBar {*/
-/*    height: 60px;*/
-/*    width: 800px;*/
-/*    border: none;*/
-/*    border-radius: 50px;*/
-/*    padding-left: 30px;*/
-/*    padding-right: 20px;*/
-/*    font-size: 20px;*/
-/*    font-weight: normal;*/
-/*    color: #282c34;*/
-/*    background-color: #ffffff;*/
-/*}*/
-
 .searchBar {
     height: 60px;
     width: 800px;
@@ -30,31 +16,15 @@
     font-weight: normal;
     color: #ffffff;
     background: none;
-    /*backdrop-filter: blur(40px);*/
     border-color: rgba(255, 255, 255, 0.5);
     transition: 0.1s;
 }
-
-.searchBar::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.searchBar:hover {
-    /*color: #ffffff;*/
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(40px);
-    /*border-color: rgba(255, 255, 255, 0.5);*/
-    transition: 0.2s;
-    scale: 100.5%;
-}
-
 
 .searchButton {
     height: 60px;
     width: 60px;
     border-style: solid;
     border-radius: 50px;
-    /*background: rgba(255, 255, 255, 0.1);*/
     background: none;
     display: flex;
     align-items: center;
@@ -65,8 +35,13 @@
     transition: 0.1s;
 }
 
-.searchButton:hover {
-    background-color: rgba(255, 255, 255, 0.4);
-    scale: 101%;
+.searchBar::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.searchBar:hover, .searchButton:hover {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(40px);
+    box-shadow: var(--box-shadow);
     transition: 0.1s;
 }

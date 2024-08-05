@@ -1,5 +1,44 @@
-.langId {
-    border: solid;
+.dropdown {
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dropbtn {
     padding: 10px;
+    border-radius: 10px;
+    background: none;
+    color: #ffffff;
+    font-weight: bold;
+    border: 2px solid #ffffff;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdownContent {
+    display: none;
+    position: absolute;
+    padding-top: 50px;
+    z-index: 1;
+}
+
+.linkContainer {
+    min-width: 50px;
+    box-shadow: var(--box-shadow);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(40px);
+    border-radius: 10px;
+}
+
+/* Links inside the dropdown */
+.linkContainer a {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.linkContainer a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
     border-radius: 10px;
 }
