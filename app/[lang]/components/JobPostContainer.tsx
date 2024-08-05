@@ -1,10 +1,13 @@
 import {resolveCid} from "@/app/lib/utils";
 import styles from './JobPostContainer.module.css';
-import JobAddInfo from "@/app/components/JobAddInfo";
+import JobAddInfo from "@/app/[lang]/components/JobAddInfo";
 import Link from "next/link";
-import '../globals.css';
+import '../../globals.css';
+import {Locale} from "@/i18n-config";
 
-export default function JobPostContainer({ job, lang }: any) {
+export default function JobPostContainer(
+    { job, lang }: { job: any, lang: Locale }
+) {
     return (
         <Link href={`http://localhost:3000/${lang}/jobs/${job.company.id}/${job.id}`} className={"noDecoration"}>
             <div className={[styles.jobContainer, "transparentCard", "clickable"].join(" ")}>

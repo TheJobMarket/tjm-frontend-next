@@ -1,13 +1,15 @@
-import NavbarComponent from "@/app/components/NavbarComponent";
+import NavbarComponent from "@/app/[lang]/components/NavbarComponent";
 
 export default function DashboardLayout({
     children, // will be a page or nested layout
+    params
 }: {
-    children: React.ReactNode
+    children: React.ReactNode,
+    params: any
 }) {
     return (
         <section>
-            <NavbarComponent/>
+            <NavbarComponent lang={params.lang}/>
             <nav></nav>
 
             {children}

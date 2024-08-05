@@ -1,8 +1,8 @@
 import styles from './page.module.css';
 import '../../../../globals.css';
-import JobPostMinimal from "@/app/components/JobPostMinimal";
+import JobPostMinimal from "@/app/[lang]/components/JobPostMinimal";
 import {resolveCid} from "@/app/lib/utils";
-import JobAddInfo from "@/app/components/JobAddInfo";
+import JobAddInfo from "@/app/[lang]/components/JobAddInfo";
 
 export default async function Page({ params }: any) {
 

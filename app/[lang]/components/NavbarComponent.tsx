@@ -1,11 +1,12 @@
 import React from "react";
 import styles from "./NavbarComponent.module.css";
-import "../../public/logo_tjm_white.png";
+import "../../../public/logo_tjm_white.png";
 import Image from "next/image";
-import logo from "../../public/logo_tjm_white.png";
-import LanguageDropdown from "@/app/components/LanguageDropdown";
+import logo from "../../../public/logo_tjm_white.png";
+import LanguageSwitcher from "@/app/[lang]/components/LanguageSwitcher";
+import {Locale} from "@/i18n-config";
 
-export default function NavbarComponent() {
+export default function NavbarComponent({ lang }: { lang: Locale }) {
 
     const pages = [
         "About",
@@ -24,7 +25,7 @@ export default function NavbarComponent() {
             </div>
             <div className={styles.pageList}>
                 <div>Post a job</div>
-                <LanguageDropdown/>
+                <LanguageSwitcher lang={lang}/>
             </div>
         </div>
     )
