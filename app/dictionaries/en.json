@@ -7,5 +7,11 @@
     "companySectionTitle": "The company \uD83C\uDFE2",
     "similarSectionTitle": "Similar opportunities \uD83E\uDDF2",
     "noJobs": "It seems like there are no positions available at the moment. How about you come back later?"
+  },
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "postJob": "Post a job"
   }
 }

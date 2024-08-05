@@ -7,6 +7,11 @@ const nextConfig = {
                 destination: '/en/jobs',
                 permanent: true,
             },
+            {
+                source: '/:lang',
+                destination: '/:lang/jobs',
+                permanent: true,
+            },
         ];
     },
 };

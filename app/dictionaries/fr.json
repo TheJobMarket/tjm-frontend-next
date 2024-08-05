@@ -5,6 +5,13 @@
     "positionPageTitle": "À propos du poste",
     "roleSectionTitle": "Le rôle \uD83D\uDCDD",
     "companySectionTitle": "L'entreprise \uD83C\uDFE2",
-    "similarSectionTitle": "Opportunités similaires \uD83E\uDDF2"
+    "similarSectionTitle": "Opportunités similaires \uD83E\uDDF2",
+    "noJobs": "Il semble qu'il n'y ait pas de postes disponibles pour le moment. Et si vous reveniez plus tard?"
+  },
+  "navbar": {
+    "home": "Accueil",
+    "about": "À propos",
+    "contact": "Contact",
+    "postJob": "Publier une offre"
   }
 }

@@ -2,7 +2,7 @@ import "server-only";
 import type { Locale } from "./i18n-config";
 
 
-const loadDictionary = (lang: string) => import(`./dictionaries/${lang}.json`).then((module) => module.default);
+const loadDictionary = (lang: string) => import(`./app/dictionaries/${lang}.json`).then((module) => module.default);
 
 const dictionaries = {
     en: () => loadDictionary("en"),
@@ -11,4 +11,4 @@ const dictionaries = {
 }
 
 export const getDictionary = async (locale: Locale) =>
-    dictionaries[locale]?.() ?? dictionaries.en(); // TODO maybe add await here?
+    dictionaries[locale]?.() ?? await dictionaries.en();
