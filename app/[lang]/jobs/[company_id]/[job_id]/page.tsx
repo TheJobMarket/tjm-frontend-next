@@ -8,12 +8,12 @@ export default async function Page({ params }: any) {
 
     const job: any = await fetch(
         `http://localhost:8080/jobs/${params.job_id}`,
-        { mode: "cors", method: "GET" }
+        { mode: "cors", method: "GET", cache: "no-store" }
     ).then(res => res.json());
 
     // TODO change to:
     // const similarJobs = await fetch(`http://localhost:8080/jobs?${job.title}+${job.company}`, { mode: "cors", method: "GET" })
-    const similarJobs = await fetch(`http://localhost:8080/jobs`, { mode: "cors", method: "GET" })
+    const similarJobs = await fetch(`http://localhost:8080/jobs`, { mode: "cors", method: "GET", cache: "no-store"})
         .then(res => res.json());
 
     const dictionary = await import(`@/app/dictionaries/${params.lang}.json`).then((module) => module.default);
