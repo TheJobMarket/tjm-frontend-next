@@ -1,14 +1,17 @@
 import styles from "./page.module.css";
 import {getDictionary} from "@/getDictionary";
+import Link from "next/link";
+
 
 export default async function Contact({ params }: any ) {
 
     const dictionary = await getDictionary(params.lang);
+    const emailAddress = "info@thejobmarket.eu"
 
     return (
         <div className={styles.page}>
             <h1 className={styles.title}>{dictionary.contact?.title}</h1>
-            {dictionary.contact?.text.map((text: string, i: number) => <p key={i}>{text}</p>)}
+            <p>{dictionary.contact?.text} <Link className={styles.link} href={`mailto:${emailAddress}`}><b>{emailAddress}</b></Link></p>
         </div>
     )
 }

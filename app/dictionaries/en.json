@@ -22,8 +22,10 @@
   },
   "contact": {
     "title": "Contact us",
-    "text": [
-      "If you have any questions or suggestions, feel free to contact us at"
-    ]
+    "text": "If you have any questions or suggestions, feel free to contact us at"
+  },
+  "postJob": {
+    "title": "Post a job",
+    "text": "Want to advertise a job opening? We are accepting free submissions until the end of August! Please send us an email with the job details to"
   }
 }
