@@ -22,3 +22,8 @@
     /*margin-right: 30px;*/
     padding-right: 20px;
 }
+
+.pageName {
+    text-decoration: none;
+    color: #ffffff;
+}

@@ -6,14 +6,15 @@ import logo from "../../../public/logo_tjm_white.png";
 import LanguageSwitcher from "@/app/[lang]/components/LanguageSwitcher";
 import {Locale} from "@/i18n-config";
 import {getDictionary} from "@/getDictionary";
+import Link from "next/link";
 
 export default async function NavbarComponent({ lang }: { lang: Locale }) {
 
     const dictionary: any = await getDictionary(lang);
 
-    const pages: string[] = [
-        dictionary.navbar.about,
-        dictionary.navbar.contact,
+    const pages = [
+        { name: dictionary.navbar.about, link: `/${lang}/about` },
+        { name: dictionary.navbar.contact, link: `/${lang}/contact` },
     ]
 
     return (
@@ -24,10 +25,12 @@ export default async function NavbarComponent({ lang }: { lang: Locale }) {
                         <Image src={logo} alt="" width={80} />
                     </a>
                 </div>
-                {pages.map((page, i) => <div key={i} className={styles.pageName}>{page}</div>)}
+                {pages.map((page, i) =>
+                    <Link key={i} className={styles.pageName} href={page.link}>{page.name}</Link>
+                )}
             </div>
             <div className={styles.pageList}>
-                <div>{dictionary.navbar.postJob}</div>
+                <Link href={`/${lang}/post-job`} className={styles.pageName}>{dictionary.navbar.postJob}</Link>
                 <LanguageSwitcher lang={lang}/>
             </div>
         </div>
