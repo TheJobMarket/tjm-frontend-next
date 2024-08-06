@@ -1,7 +1,7 @@
 import styles from "./page.module.css";
 import {getDictionary} from "@/getDictionary";
 
-export default async function Page({ params }: any ) {
+export default async function About({ params }: any ) {
 
     const dictionary = await getDictionary(params.lang);
 
