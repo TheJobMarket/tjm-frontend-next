@@ -6,7 +6,8 @@
     "roleSectionTitle": "Descripción \uD83D\uDCDD",
     "companySectionTitle": "Acerca de la empresa \uD83C\uDFE2",
     "similarSectionTitle": "Oportunidades similares \uD83E\uDDF2",
-    "noJobs": "Parece que no hay posiciones disponibles en este momento. ¿Qué tal si vuelves más tarde?"
+    "noJobs": "Parece que no hay posiciones disponibles en este momento. ¿Qué tal si vuelves más tarde?",
+    "apply": "Solicita ahora"
   },
   "navbar": {
     "home": "Inicio",

@@ -1,4 +1,5 @@
 import styles from './JobAddInfo.module.css';
+import languageNames from '@/app/lib/languageNames';
 
 function getInfo(job: any) {
     let info = [];
@@ -10,10 +11,10 @@ function getInfo(job: any) {
         });
     }
 
-    if (job.languages != null) {
+    if (job.languages.length > 0) {
         info.push({
             property: "languages",
-            value: job.languages
+            value: job.languages.map((l: string) => languageNames[l]).join(", ")
         });
     }
 

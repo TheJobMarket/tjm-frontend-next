@@ -2,7 +2,7 @@
 
 import styles from "./LanguageSwitcher.module.css";
 import React from "react";
-import "../../globals.css"
+import "../globals.css"
 import {Locale, i18n} from "@/i18n-config";
 import { usePathname } from "next/navigation";
 import Link from "next/link";

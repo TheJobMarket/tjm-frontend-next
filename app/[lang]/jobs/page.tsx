@@ -1,5 +1,5 @@
-import JobPostContainer from "@/app/[lang]/components/JobPostContainer";
-import JobSearchBar from "@/app/[lang]/components/JobSearchBar";
+import JobPostContainer from "@/app/components/JobPostContainer";
+import JobSearchBar from "@/app/components/JobSearchBar";
 import styles from "./page.module.css";
 import '../../globals.css';
 

@@ -6,7 +6,8 @@
     "roleSectionTitle": "The role \uD83D\uDCDD",
     "companySectionTitle": "The company \uD83C\uDFE2",
     "similarSectionTitle": "Similar opportunities \uD83E\uDDF2",
-    "noJobs": "It seems like there are no positions available at the moment. How about you come back later?"
+    "noJobs": "It seems like there are no positions available at the moment. How about you come back later?",
+    "apply": "Apply now"
   },
   "navbar": {
     "home": "Home",
@@ -26,6 +27,6 @@
   },
   "postJob": {
     "title": "Post a job",
-    "text": "Want to advertise a job opening? We are accepting free submissions until the end of August! Please send us an email with the job details to"
+    "text": "Want to advertise a job opening? We are currently accepting free submissions! Please send us an email with the job details to"
   }
 }

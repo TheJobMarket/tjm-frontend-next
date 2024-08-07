@@ -1,8 +1,8 @@
 import {resolveCid} from "@/app/lib/utils";
 import styles from './JobPostContainer.module.css';
-import JobAddInfo from "@/app/[lang]/components/JobAddInfo";
+import JobAddInfo from "@/app/components/JobAddInfo";
 import Link from "next/link";
-import '../../globals.css';
+import '../globals.css';
 import {Locale} from "@/i18n-config";
 
 export default function JobPostContainer(

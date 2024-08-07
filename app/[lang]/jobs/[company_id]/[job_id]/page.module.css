@@ -45,6 +45,32 @@
     gap: 20px;
 }
 
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /*gap: 20px; */
+}
+
+.applyButton {
+    background: none;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.applyButton:disabled {
+    cursor: auto;
+    color: rgba(255, 255, 255, 0.5);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
 .logoAndPositionDescription {
     display: flex;
     flex-direction: row;

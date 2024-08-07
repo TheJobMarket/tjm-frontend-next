@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./NavbarComponent.module.css";
-import "../../../public/logo_tjm_white.png";
+import "../../public/logo_tjm_white.png";
 import Image from "next/image";
-import logo from "../../../public/logo_tjm_white.png";
-import LanguageSwitcher from "@/app/[lang]/components/LanguageSwitcher";
+import logo from "../../public/logo_tjm_white.png";
+import LanguageSwitcher from "@/app/components/LanguageSwitcher";
 import {Locale} from "@/i18n-config";
 import {getDictionary} from "@/getDictionary";
 import Link from "next/link";

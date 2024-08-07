@@ -1,12 +1,13 @@
 import styles from './page.module.css';
 import '../../../../globals.css';
-import JobPostMinimal from "@/app/[lang]/components/JobPostMinimal";
+import JobPostMinimal from "@/app/components/JobPostMinimal";
 import {resolveCid} from "@/app/lib/utils";
-import JobAddInfo from "@/app/[lang]/components/JobAddInfo";
+import JobAddInfo from "@/app/components/JobAddInfo";
+import Link from "next/link";
 
 export default async function Page({ params }: any) {
 
-    const job: any = await fetch(
+    const job: Job = await fetch(
         `http://localhost:8080/jobs/${params.job_id}`,
         { mode: "cors", method: "GET", cache: "no-store" }
     ).then(res => res.json());
@@ -23,13 +24,28 @@ export default async function Page({ params }: any) {
             <h1 className={styles.title}>{dictionary.text.positionPageTitle}</h1>
             <div className={styles.positionContainer}>
                 <div className={[styles.positionHeader, "transparentCard"].join(" ")}>
-                    <div className={styles.logoAndPositionDescription}>
-                        <div className={styles.logoDiv}>
-                            <img alt="" src={resolveCid(job.company.logoCid)} />
+                    <div className={styles.top}>
+                        <div className={styles.logoAndPositionDescription}>
+                            <div className={styles.logoDiv}>
+                                <img alt="" src={resolveCid(job.company.logoCid)} />
+                            </div>
+                            <div className={styles.titleAndCompany}>
+                                <div className={styles.jobTitle}>{job.title}</div>
+                                <div className={styles.companyName}>{job.company.name}</div>
+                            </div>
                         </div>
-                        <div className={styles.titleAndCompany}>
-                            <div className={styles.jobTitle}>{job.title}</div>
-                            <div className={styles.companyName}>{job.company.name}</div>
+                        <div className={styles.applyDiv}>
+                            {job.applicationUrl ? (
+                                <Link href={job.applicationUrl} target={"_blank"}>
+                                    <button className={[styles.applyButton, "clickable"].join(" ")}>
+                                        {dictionary.text.apply}
+                                    </button>
+                                </Link>
+                            ) : (
+                                <button className={styles.applyButton} disabled>
+                                    {dictionary.text.apply}
+                                </button>
+                            )}
                         </div>
                     </div>
                     <JobAddInfo job={job} />
