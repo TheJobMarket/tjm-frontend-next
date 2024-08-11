@@ -12,7 +12,7 @@ export default async function Page({ params }: any) {
         { mode: "cors", method: "GET", cache: "no-store" }
     ).then(res => res.json());
 
-    // TODO change to:
+    // TODO change to query:
     // const similarJobs = await fetch(`http://localhost:8080/jobs?${job.title}+${job.company}`, { mode: "cors", method: "GET" })
     const similarJobs = await fetch(`http://localhost:8080/jobs`, { mode: "cors", method: "GET", cache: "no-store"})
         .then(res => res.json());
@@ -48,7 +48,7 @@ export default async function Page({ params }: any) {
                             )}
                         </div>
                     </div>
-                    <JobAddInfo job={job} />
+                    <JobAddInfo job={job} lang={params.lang}/>
                 </div>
                 <div className={styles.roleOuterContainer}>
                     <h2 className={styles.subtitle}>{dictionary.text.roleSectionTitle}</h2>

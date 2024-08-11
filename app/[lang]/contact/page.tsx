@@ -11,7 +11,7 @@ export default async function Contact({ params }: any ) {
     return (
         <div className={styles.page}>
             <h1 className={styles.title}>{dictionary.contact?.title}</h1>
-            <p>{dictionary.contact?.text} <Link className={styles.link} href={`mailto:${emailAddress}`}><b>{emailAddress}</b></Link></p>
+            <p>{dictionary.contact?.text} <Link className={styles.link} href={`mailto:${emailAddress}`}><b>{emailAddress}</b></Link>.</p>
         </div>
     )
 }

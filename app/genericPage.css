@@ -1,0 +1,19 @@
+.page {
+    max-width: 800px;
+}
+
+.page p {
+    font-size: 18px;
+}
+
+.title {
+    font-size: 72px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.link {
+    text-decoration: none;
+    color: #ffffff;
+}

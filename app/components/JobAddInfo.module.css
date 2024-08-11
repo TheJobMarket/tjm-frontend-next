@@ -11,3 +11,10 @@
     gap: 10px;
 }
 
+@media (max-width:801px) {
+    .container {
+        flex-direction: column;
+        gap: 10px;
+        /*display: none;*/
+    }
+}

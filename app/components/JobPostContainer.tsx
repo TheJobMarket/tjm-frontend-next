@@ -22,7 +22,7 @@ export default function JobPostContainer(
                         <div className={styles.companyName}>{job.company.name}</div>
                     </div>
                 </div>
-                <JobAddInfo job={job}/>
+                <JobAddInfo job={job} lang={lang}/>
             </div>
         </Link>
     )

@@ -1,13 +1,19 @@
 import styles from './JobAddInfo.module.css';
 import languageNames from '@/app/lib/languageNames';
 
-function getInfo(job: any) {
+function getInfo(job: Job, lang: string) {
+    const formatter = new Intl.NumberFormat(lang, {
+        style: 'currency',
+        currency: 'EUR',
+        minimumFractionDigits: 0
+    });
+
     let info = [];
 
-    if (job.pay != null) {
+    if (job.payMin != null && job.payMax != null) {
         info.push({
             property: "salary",
-            value: job.pay
+            value: formatter.format(job.payMin) + " - " + formatter.format(job.payMax)
         });
     }
 
@@ -18,10 +24,10 @@ function getInfo(job: any) {
         });
     }
 
-    if (job.location != null) {
+    if (job.country != null) {
         info.push({
             property: "location",
-            value: job.location
+            value: job.city + ", " + job.country
         });
     }
 
@@ -35,8 +41,8 @@ function getInfo(job: any) {
     return info;
 }
 
-export default function JobAddInfo({ job }: any) {
-    const info = getInfo(job);
+export default function JobAddInfo({ job, lang }: any) {
+    const info = getInfo(job, lang);
 
     const icons: any = {
         "date": "📅",

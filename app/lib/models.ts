@@ -10,7 +10,7 @@ type Job = {
     payMax: number | null;
     city: string;
     country: string;
-    languages: string[] | null;
+    languages: string[];
     workplace: string | null;
     jobType: string;
 };
