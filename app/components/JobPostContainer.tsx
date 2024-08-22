@@ -9,7 +9,7 @@ export default function JobPostContainer(
     { job, lang }: { job: any, lang: Locale }
 ) {
     return (
-        <Link href={`http://localhost:3000/${lang}/jobs/${job.company.id}/${job.id}`} className={"noDecoration"}>
+        <Link href={`/${lang}/jobs/${job.company.id}/${job.id}`} className={"noDecoration"}>
             <div className={[styles.jobContainer, "transparentCard", "clickable"].join(" ")}>
                 <div className={styles.leftDiv}>
                     <div className={styles.logoDiv}>

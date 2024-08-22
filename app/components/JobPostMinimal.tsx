@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function JobPostMinimal({ job, lang }: any) {
     return (
-        <Link href={`http://localhost:3000/${lang}/jobs/${job.company.id}/${job.id}`} className={"noDecoration"}>
+        <Link href={`/${lang}/jobs/${job.company.id}/${job.id}`} className={"noDecoration"}>
             <div className={[styles.container, "transparentCard", "clickable"].join(" ")}>
                 <div className={styles.logoDiv}>
                     {/* TODO change to Image eventually */}
