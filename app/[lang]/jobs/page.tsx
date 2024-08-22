@@ -5,7 +5,7 @@ import '../../globals.css';
 
 
 export default async function Jobs({ params }: any) {
-    const jobs = await fetch("http://localhost:8080/jobs", { mode: "cors", method: "GET", cache: "no-store"})
+    const jobs = await fetch("http://api.thejobmarket.eu/jobs", { mode: "cors", method: "GET", cache: "no-store"})
         .then(res => res.json());
 
     const dictionary = await import(`@/app/dictionaries/${params.lang}.json`).then((module) => module.default);

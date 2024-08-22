@@ -12,9 +12,13 @@ export default async function NavbarComponent({ lang }: { lang: Locale }) {
 
     const dictionary: any = await getDictionary(lang);
 
-    const pages = [
+    const leftPages = [
         { name: dictionary.navbar.about, link: `/${lang}/about` },
         { name: dictionary.navbar.contact, link: `/${lang}/contact` },
+    ]
+
+    const rightPages = [
+        { name: dictionary.navbar.postJob, link: `/${lang}/post-job` },
     ]
 
     return (
@@ -25,7 +29,7 @@ export default async function NavbarComponent({ lang }: { lang: Locale }) {
                         <Image src={logo} alt="" width={80} />
                     </a>
                 </div>
-                {pages.map((page, i) =>
+                {leftPages.map((page, i) =>
                     <Link key={i} className={styles.pageName} href={page.link}>{page.name}</Link>
                 )}
             </div>
